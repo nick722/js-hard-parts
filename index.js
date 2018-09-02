@@ -1,22 +1,21 @@
-//Extension 3
+// Challenge 4
+// Now we are going to create a function addByX
+// that returns a function that will add an input by x.
 
-// Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs.
-// BONUS: Use reduce!
-
-
-function intersection(arrays) {
-    let output = arguments;
-    return output;
+function addByX(x) {
+ function add(input) {
+     return input + x;
+ }   
+    
+ return add;
 }
 
-console.log(intersection([5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20]));
-// should log: [5, 15]
+var addByTwo = addByX(2);
+
+// now call addByTwo with an input of 1
+console.log(addByTwo(1));; //should return 3
+
+// now call addByTwo with an input of 2
+console.log(addByTwo(2));; //should return 4
 
 
-// function reduce(array, callback, initialValue) {
-//     var output = initialValue;
-//     for (let i = 0; i < array.length; i++) {
-//         output = callback(output, array[i]);
-//     }
-//     return output;
-// }
