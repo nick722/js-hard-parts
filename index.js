@@ -1,21 +1,32 @@
-// Challenge 4
-// Now we are going to create a function addByX
-// that returns a function that will add an input by x.
-
 function addByX(x) {
- function add(input) {
-     return input + x;
- }   
-    
- return add;
+    function add(input) {
+        return input + x;
+    }
+    return add;
 }
 
 var addByTwo = addByX(2);
 
-// now call addByTwo with an input of 1
-console.log(addByTwo(1));; //should return 3
+//Extension: Challenge 5
+function once(func) {
 
-// now call addByTwo with an input of 2
-console.log(addByTwo(2));; //should return 4
+    let counter = 0;
+    let output;
 
+    function finalFunc(x) {
+        if (counter == 0) {
+            counter++;
+            return output = func(x);
+        } else {
+            return output;
+        }
+    }
+    return finalFunc;
+}
 
+var onceFunc = once(addByTwo);
+
+// UNCOMMENT THESE TO TEST YOUR WORK!
+console.log(onceFunc(4));  //should log 6
+console.log(onceFunc(10));  //should log 6
+console.log(onceFunc(9001));  //should log 6
