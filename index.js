@@ -1,32 +1,5 @@
-function addByX(x) {
-    function add(input) {
-        return input + x;
-    }
-    return add;
-}
+console.log('I\'m at the beginning of the code');
 
-var addByTwo = addByX(2);
+setTimeout(function () {console.log('I am in the setTimeout callback function')}, 0);
 
-//Extension: Challenge 5
-function once(func) {
-
-    let counter = 0;
-    let output;
-
-    function finalFunc(x) {
-        if (counter == 0) {
-            counter++;
-            return output = func(x);
-        } else {
-            return output;
-        }
-    }
-    return finalFunc;
-}
-
-var onceFunc = once(addByTwo);
-
-// UNCOMMENT THESE TO TEST YOUR WORK!
-console.log(onceFunc(4));  //should log 6
-console.log(onceFunc(10));  //should log 6
-console.log(onceFunc(9001));  //should log 6
+console.log('I am at the end of the code');
