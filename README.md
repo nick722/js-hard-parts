@@ -11,20 +11,26 @@ https://jsbin.com/hijijag/1/edit?js,console,output
 
 =================================================
 
-Challenge 3
+Challenge 4
+Recreate the built in array method, forEach:
+Write a function that takes as parameters an array, arr,
+and a callback function, cb.
 
-1) Write a function everyXsecsForYsecs that will accept three arguments:
-a function,
-an interval time in seconds,
-and a total time in seconds.
+The forEach function will
+iterate through arr
+passing each element
+and its index as arguments to cb.
 
-everyXsecsForYsecs should invoke the given function
-every X times 1000 milliseconds,
-but then stop invoking the function after Y times 1000 milliseconds.
+Create a variable named delays
+and assign to it an array with the numbers
+2000, 5000, 0, and 3500 (in that order).
 
-Write function sayHowdy that will log "Howdy" to the console.
-Then test your everyXsecsForYsecs function
-by using it to invoke sayHowdy every 1 second for 5 seconds.
+Write a function, delayLog,
+that takes as input a delayTime and an index, i.
+When invoked, the function should wait delayTime milliseconds
+before logging to the console,
+"printing element i" (with "i" replaced with the actual index passed in).
 
-2) Now, modify your everyXsecsForYsecs function so it does not use setInterval,
-but still keeps the same functionality.
+Putting it all together,
+run the delayLog function on each item of the delays array
+using the forEach function you created.
