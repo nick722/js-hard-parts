@@ -1,6 +1,14 @@
 function everyXsecsForYsecs(func, x, y) {
-    let intervalID = setInterval(func, 1000 * x);
-    setTimeout(function(){clearInterval(intervalID)}, 1000 * y);
+
+    function mySetTimeout() {
+        setTimeout(function () {
+            func();
+        }, 1000 * x);
+    };
+
+    for (let i = 0; i < y; i++) {
+        mySetTimeout();
+    }
 }
 
 function logHowdy() {
