@@ -11,18 +11,20 @@ https://jsbin.com/hijijag/1/edit?js,console,output
 
 =================================================
 
-Challenge 2
-Write code that will log to the console "Interval Hello!"
-every 2 seconds (see setInterval).
+Challenge 3
 
-1) Use the given clearAllIntervals function to clear all the messages
-when you have this functionality working.
+1) Write a function everyXsecsForYsecs that will accept three arguments:
+a function,
+an interval time in seconds,
+and a total time in seconds.
 
-2) Next, modify your code so that the "Interval Hello!" messages
-will automatically stop after 10 seconds.
+everyXsecsForYsecs should invoke the given function
+every X times 1000 milliseconds,
+but then stop invoking the function after Y times 1000 milliseconds.
 
-3) Then, modify your code again so that the "Interval Hello!" messages
-will automatically stop after 10 seconds
-without use of the clearAllIntervals function,
-and using clearInterval only once.
-Perform research if you are unsure how to do this.
+Write function sayHowdy that will log "Howdy" to the console.
+Then test your everyXsecsForYsecs function
+by using it to invoke sayHowdy every 1 second for 5 seconds.
+
+2) Now, modify your everyXsecsForYsecs function so it does not use setInterval,
+but still keeps the same functionality.

@@ -1,5 +1,10 @@
-let intervalID = setInterval(function () {
-    console.log('Interval Hello!');
-}, 2000);
+function everyXsecsForYsecs(func, x, y) {
+    let intervalID = setInterval(func, 1000 * x);
+    setTimeout(function(){clearInterval(intervalID)}, 1000 * y);
+}
 
-clearInterval(intervalID);
+function logHowdy() {
+    console.log("Howdy");
+}
+
+everyXsecsForYsecs(logHowdy, 1, 5);
