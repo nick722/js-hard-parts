@@ -11,25 +11,27 @@ https://jsbin.com/hijijag/1/edit?js,console,output
 
 =================================================
 
-Challenge 5
-#1: Activate Other Button  #2: Change BG Color
+Challenge 6
+In this challenge we are going to simulate an AJAX call
+to get information from a server.
+This is not a real AJAX call, but the asynchonicity is similar.
 
-Write a function changeColor
-that when invoked
-will first check
-if the current page background color is "rgb(221, 238, 255)".
+Modify the function ajaxSimulate
+to take an id and a callback function as input.
+After the database array,
+set a timer
+that will pass the element of database
+whose index matches id to the callback function after 0 ms.
 
-If it is, it changes the color to "rgb(255, 238, 221)".
-If it isn't, it sets the color to "rgb(221, 238, 255)".
+2) Create a second function storeData (outside of ajaxSimulate)
+that takes data as input
+and assigns it to the dataReceived variable already defined.
 
-Add a click event listener to button #1 above
-(it has an id of "activate").
-On click, the button should log to the console "clicked #1".
-It should also set up a click event listener on button #2 (id of "color").
-That listener should log to console "clicked #2"
-and then call the changeColor function you just created.
+Invoke the ajaxSimulate function with an id of 1
+and the storeData function as the callback.
+Immediately after, log to the console the value of dataReceived.
+What do you expect it to be?
 
-Clear the console and hit the 'Run with JS' button.
-Look at what code has run by analyzing the console.
-Then try to change the background color by clicking button #2.
-What needs to happen for the button to work?
+Without changing anything else,
+copy-paste the console.log statement somewhere
+where it will log with the info we need.

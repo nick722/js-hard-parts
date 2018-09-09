@@ -1,17 +1,19 @@
-function changeColor() {
-    let backgroundColor = document.body.style.backgroundColor;
+var dataReceived;
 
-    if(backgroundColor === 'rgb(221, 238, 255)') {
-        console.log('1.Set background to rgb(255, 238, 221)');
-        document.body.style.backgroundColor = 'rgb(255, 238, 221)';
-    } else {
-        console.log('2.Set background to rgb(221, 238, 255)');
-        document.body.style.backgroundColor = 'rgb(221, 238, 255)';
-    }
+function ajaxSimulate(id, callback) {
+    var database = ['Aaron', 'Barbara', 'Chris'];
+    database.forEach(function (data, i) {
+        if(i === id) {
+            setTimeout(function(){callback(database[i])}, 0);
+        }
+    })
+}
+// ...your code below
+function storeData(data) {
+    console.log('Element of database is: ' + data);
+    dataReceived = data;
 }
 
-function makeButton2Active() {
-    console.log('clicked #1');
-    document.getElementById('color').addEventListener('click', changeColor);
-}
+ajaxSimulate(1, storeData);
+console.log('dataReceived >>>', dataReceived);
 
