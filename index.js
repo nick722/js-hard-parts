@@ -2,8 +2,7 @@ let intervalID = setInterval(function () {
     console.log('Interval Hello!');
 }, 2000);
 
-clearAllIntervals();
-
+setTimeout(clearAllIntervals, 10000);
 
 // ...your code above
 function clearAllIntervals() {
