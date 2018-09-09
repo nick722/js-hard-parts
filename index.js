@@ -1,18 +1,17 @@
-function myForEach(arr, cb) {
-    for (let i=0; i<arr.length; i++) {
-        cb(arr[i], i);
+function changeColor() {
+    let backgroundColor = document.body.style.backgroundColor;
+
+    if(backgroundColor === 'rgb(221, 238, 255)') {
+        console.log('1.Set background to rgb(255, 238, 221)');
+        document.body.style.backgroundColor = 'rgb(255, 238, 221)';
+    } else {
+        console.log('2.Set background to rgb(221, 238, 255)');
+        document.body.style.backgroundColor = 'rgb(221, 238, 255)';
     }
 }
 
-let delays = [2000, 5000, 0, 3500];
+function makeButton2Active() {
+    console.log('clicked #1');
+    document.getElementById('color').addEventListener('click', changeColor);
+}
 
-function delayLog(delayTime, i) {
-    setTimeout(
-        function () {console.log("printing element " + i
-            + " delayed by " + delayTime + " seconds.");}
-        , delayTime);
-};
-
-myForEach(delays, delayLog);
-
-// delayLog(delays[0], 0);

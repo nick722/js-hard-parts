@@ -11,26 +11,25 @@ https://jsbin.com/hijijag/1/edit?js,console,output
 
 =================================================
 
-Challenge 4
-Recreate the built in array method, forEach:
-Write a function that takes as parameters an array, arr,
-and a callback function, cb.
+Challenge 5
+#1: Activate Other Button  #2: Change BG Color
 
-The forEach function will
-iterate through arr
-passing each element
-and its index as arguments to cb.
+Write a function changeColor
+that when invoked
+will first check
+if the current page background color is "rgb(221, 238, 255)".
 
-Create a variable named delays
-and assign to it an array with the numbers
-2000, 5000, 0, and 3500 (in that order).
+If it is, it changes the color to "rgb(255, 238, 221)".
+If it isn't, it sets the color to "rgb(221, 238, 255)".
 
-Write a function, delayLog,
-that takes as input a delayTime and an index, i.
-When invoked, the function should wait delayTime milliseconds
-before logging to the console,
-"printing element i" (with "i" replaced with the actual index passed in).
+Add a click event listener to button #1 above
+(it has an id of "activate").
+On click, the button should log to the console "clicked #1".
+It should also set up a click event listener on button #2 (id of "color").
+That listener should log to console "clicked #2"
+and then call the changeColor function you just created.
 
-Putting it all together,
-run the delayLog function on each item of the delays array
-using the forEach function you created.
+Clear the console and hit the 'Run with JS' button.
+Look at what code has run by analyzing the console.
+Then try to change the background color by clicking button #2.
+What needs to happen for the button to work?
