@@ -9,21 +9,20 @@ http://csbin.io/closures
 Asynchronicity
 https://jsbin.com/hijijag/1/edit?js,console,output
 
-Challenge 1
-===========
-Write code that will log to the console, 'I am at the beginning of the code'.
+=================================================
 
-Beneath that console log, set a timer (see setTimeout)
-that will log to the console 'I am in the setTimeout callback function'
-after 3 seconds (3000 ms)
+Challenge 2
+Write code that will log to the console "Interval Hello!"
+every 2 seconds (see setInterval).
 
-Next, add code to the end of the challenge to log 'I am at the end of the code'.
-Now re-run the code.
+1) Use the given clearAllIntervals function to clear all the messages
+when you have this functionality working.
 
-Make sure the 'console' and 'output' panes are showing
-(click the tabs above if not)
-and then run your code with the 'Run with JS' button.
+2) Next, modify your code so that the "Interval Hello!" messages
+will automatically stop after 10 seconds.
 
-Clear the console.
-Change the delay time in the time from 3000 ms to 0.
-Think hard about how the order should change and then run the code again.
+3) Then, modify your code again so that the "Interval Hello!" messages
+will automatically stop after 10 seconds
+without use of the clearAllIntervals function,
+and using clearInterval only once.
+Perform research if you are unsure how to do this.

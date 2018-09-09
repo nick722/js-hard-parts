@@ -1,5 +1,13 @@
-console.log('I\'m at the beginning of the code');
+let intervalID = setInterval(function () {
+    console.log('Interval Hello!');
+}, 2000);
 
-setTimeout(function () {console.log('I am in the setTimeout callback function')}, 0);
+clearAllIntervals();
 
-console.log('I am at the end of the code');
+
+// ...your code above
+function clearAllIntervals() {
+    for (let i = 0; i < 10000; i++) {
+        clearInterval(intervalID);
+    }
+}
