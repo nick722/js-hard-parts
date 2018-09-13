@@ -1,11 +1,16 @@
-var xhttp = new XMLHttpRequest();
-var url = 'https://api.spotify.com/v1';
-xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        var response = xhttp.responseText;
-        console.log('response: ', response);
-    }
-};
+/****************************************************************
+ USING THE 'NEW' KEYWORD
+ ****************************************************************/
 
-xhttp.open('GET', url, true);
-xhttp.send();
+/*** CHALLENGE 1 of 3 ***/
+
+function PersonConstructor() {
+    // add code here
+
+
+}
+
+
+// /********* Uncomment this line to test your work! *********/
+var simon = new PersonConstructor;
+// simon.greet(); // -> Logs 'hello'
