@@ -7,12 +7,10 @@ frontendmasters.com - Will Sentance JavaScript The Hard Parts 01.22.2018 7h9m
 
 Using the NEW keyword
 
-Challenge 1/3
-
-Create a function PersonConstructor
-that uses the this keyword
-to save a single property onto its scope called greet.
-greet should be a function that logs the string 'hello'.
+Challenge 3/3
+Without editing the code you've already written,
+add an introduce method to the PersonConstructor function that logs
+"Hi, my name is [name]".
 
 
 =================================================================
