@@ -5,12 +5,13 @@ frontendmasters.com - Will Sentance JavaScript The Hard Parts 01.22.2018 7h9m
 ---------------------------------------------------------------
 ===============================================================
 
-Using the NEW keyword
+Using ES6 Classes
 
-Challenge 3/3
-Without editing the code you've already written,
-add an introduce method to the PersonConstructor function that logs
-"Hi, my name is [name]".
+Challenge 1/2
+Create a class PersonClass.
+PersonClass should have a constructor that is passed an input of name
+and saves it to a property by the same name.
+PersonClass should also have a method called greet that logs the string 'hello'.
 
 
 =================================================================
