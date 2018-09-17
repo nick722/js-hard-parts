@@ -16,14 +16,19 @@ function userFactory(name, score) {
     return user;
 }
 
-// var adminFunctionStore /* Put code here */ ;
-var adminFunctionStore = Object.create(userFunctionStore) ;
-
-adminFunctionStore.sayType();
+// Challenge 1/5
+let adminFunctionStore = Object.create(userFunctionStore) ;
+// adminFunctionStore.sayType();
 
 function adminFactory(name, score) {
-    // Put code here
+    // Challenge 2/5
+    let admin = Object.create(userFactory);
+    return admin;
 }
+
+let piper = new adminFactory('Piper', 1);
+
+console.log(piper.score);
 
 /* Put code here for a method called sharePublicMessage*/
 

@@ -7,11 +7,12 @@ frontendmasters.com - Will Sentance JavaScript The Hard Parts 01.22.2018 7h9m
 
 EXTENSION: Subclassing
 
-Challenge 1/5
+Challenge 2/5
 
-Create an object adminFunctionStore
-that has access to all methods in the userFunctionStore object,
-without copying them over individually.
+Create an adminFactory function
+that creates an object with all the same data fields (and default values)
+as objects of the userFactory class,
+but without copying each data field individually.
 
 
 =================================================================
