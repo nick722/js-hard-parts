@@ -5,15 +5,13 @@ frontendmasters.com - Will Sentance JavaScript The Hard Parts 01.22.2018 7h9m
 ---------------------------------------------------------------
 ===============================================================
 
-Using ES6 Classes
+EXTENSION: Subclassing
 
-Challenge 2/2
-Create a class DeveloperClass
- that creates objects by extending the PersonClass class.
- In addition to having a name property and greet method,
- DeveloperClass should have an introduce method.
- When called, introduce should log the string
- 'Hello World, my name is [name]'.
+Challenge 1/5
+
+Create an object adminFunctionStore
+that has access to all methods in the userFunctionStore object,
+without copying them over individually.
 
 
 =================================================================

@@ -1,26 +1,34 @@
-/*** CHALLENGE 1 of 3 ***/
-class PersonClass {
-    constructor(name) {
-        this.name = name;
-    }
-    greet () {
-        console.log('hello');
+/****************************************************************
+ EXTENSION: SUBCLASSING
+ ****************************************************************/
+
+var userFunctionStore = {
+    sayType: function() {
+        console.log("I am a " + this.type);
     }
 }
-// /********* Uncomment this line to test your work! *********/
-var george = new PersonClass('Nick');
-// george.greet(); // -> Logs 'hello'
 
-/*** CHALLENGE 2 of 3 ***/
-
-// add code here
-class DeveloperClass extends PersonClass {
-    introduce() {
-        console.log('hello, my name is ' + this.name);
-    }
+function userFactory(name, score) {
+    let user = Object.create(userFunctionStore);
+    user.type = "User";
+    user.name = name;
+    user.score = score;
+    return user;
 }
+
+// var adminFunctionStore /* Put code here */ ;
+var adminFunctionStore = Object.create(userFunctionStore) ;
+
+adminFunctionStore.sayType();
+
+function adminFactory(name, score) {
+    // Put code here
+}
+
+/* Put code here for a method called sharePublicMessage*/
+
+var adminFromFactory = adminFactory("Eva", 5);
 
 // /********* Uncomment these lines to test your work! *********/
-var thai = new DeveloperClass('Kolya', 35);
-console.log(thai.name); // -> Logs 'Thai'
-thai.introduce(); //-> Logs 'Hello World, my name is Thai'
+// adminFromFactory.sayType() // -> Logs "I am a Admin"
+// adminFromFactory.sharePublicMessage() // -> Logs "Welcome users!"
