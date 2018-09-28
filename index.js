@@ -1,13 +1,14 @@
-// Challenge 2
-var promise = new Promise(function (resolve, reject) {
+// Challenge 3
+
+promise = new Promise(function(resolve, reject) {
     // ADD CODE HERE
     setTimeout(function () {
-        resolve('Resoleved');
+        reject('Rejected');
     }, 1000);
-});
+})
 
-// Should print out "Resolved!"
+// Should print out "Reject!"
 // ADD CODE HERE
-promise.then(function (result) {
-    console.log(result + '!');
+promise.catch(function (value) {
+    console.log(value + '!');
 })
