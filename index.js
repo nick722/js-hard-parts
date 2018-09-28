@@ -1,12 +1,15 @@
-// Challenge 4
-
-promise = new Promise(function (resolve, reject) {
-    // ADD CODE HERE
-    setTimeout(function () {
-        resolve();
+// Challenge 5
+function delay(){
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve();
+        }, 1000);
     })
-});
+}
 
-// Uncomment the lines below when ready
-promise.then(() => console.log('Promise has been resolved!'));
-console.log("I'm not the promise!");
+let sayHello = () => console.log('Hello');
+let funcWhenRejected = () => console.log('Rejected');
+
+// Uncomment the code below to test
+// This code should log "Hello" after 1000ms
+delay().then(sayHello);
